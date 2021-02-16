@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "qo"
+version = "1.0"
+description = "Task coordination for complex workloads"
+authors = ["Ryan Hiebert <ryan@aspiredu.com>"]
+license = "MIT"
+
+[tool.poetry.extras]
+Django = ["Django"]
+celery = ["celery"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = { version = "^3.1.6", optional = true }
+celery = { version = "^5.0.5", optional = true }
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
